@@ -30,7 +30,7 @@ nav{
   transition: all 0.5s ease;
   font-size: 600;
 }
-nav span.Title{
+nav .Title{
 margin: 0 0 0 15px;
 font-size: 30px;
 letter-spacing: 2px;
