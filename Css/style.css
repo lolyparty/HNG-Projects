@@ -7,10 +7,10 @@ header{
   width: 100%;
 }
 header#index-header-section{
-  background-image: url("../images/white-and-black-mattress-fronting-the-mountain-775219.jpg");
+  background-image: url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 }
 header#contact-header-section{
-background: url("../images/selective-focus-photo-of-reception-signage-3768095.jpg");
+background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 background-position: center;
 background-size: cover;
 }
