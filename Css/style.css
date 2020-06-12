@@ -560,6 +560,10 @@ background-color: #eab058;
 padding: 15px;
 color: #000;
 }
+footer .txt{
+  text-align: center;
+  font-size: 17px;
+}
 footer .footer{
   max-width: 1350px;
   display: flex;
