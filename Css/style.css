@@ -1,0 +1,894 @@
+
+header{
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+header#index-header-section{
+  background-image: url("../images/white-and-black-mattress-fronting-the-mountain-775219.jpg");
+}
+header#contact-header-section{
+background: url("../images/selective-focus-photo-of-reception-signage-3768095.jpg");
+background-position: center;
+background-size: cover;
+}
+header#rooms_rates-header-section{
+  background-image: url("../images/woman-leaning-on-handrail-in-room-1838554.jpg");
+}
+/*---nav-----*/
+nav{
+  width: 85%;
+  height: 80px;
+  line-height: 70px;
+  display: block;
+  z-index: 900;
+  position: relative;
+  font-size: 20px;
+  background-color:  rgb(59, 56, 56);
+  transition: all 0.5s ease;
+  font-size: 600;
+}
+nav span.Title{
+margin: 0 0 0 15px;
+font-size: 30px;
+letter-spacing: 2px;
+}
+.primaryColor{
+  color: rgb(236, 176, 10);
+} 
+nav ul{
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+nav .headerBars{
+  display: none;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px;
+  position: relative;
+}
+nav ul li a{
+  color: rgb(252, 252, 252) !important;
+  text-decoration: none !important;
+}
+nav ul li a.active::before{
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+  content: "";
+  width: 35px;
+  height:5px;
+  background-color: #eab058;
+}
+nav ul li a:hover::before{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  content: "";
+  width: 0;
+  height:5px;
+  background-color: orange;
+  animation: textEffect 0.5s ease forwards alternate;
+}
+@keyframes textEffect {
+  from{
+    width: 20px;
+    left: 30px;
+  }
+  to{
+    width: 100%;
+    left: 0;
+  }
+}
+/*----bootstrap---*/
+.carousel, #middle, .media, .jumbotron, .overlay{
+  display: none;
+}
+/*-----Social-icon---*/
+.social-icon{
+  width: 50px;
+  height: 180px;
+  float: right;
+  margin: -10px 15px;
+  background-color: rgb(245, 192, 93);
+  text-align: center;
+  font-size: 22px;
+  padding: 15px 0 0 0;
+}
+.social-icon a{
+  display: block;
+  margin: 20px 0;
+  color: rgb(90, 88, 88);
+}
+/*------txt-content---*/
+header .txtContent{
+  position: relative;
+  top: 20%;
+  margin:0 50px;
+  padding: 20px;
+  text-transform: capitalize;
+  width: 50%;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: rgba(59, 56, 56, 0.404);
+}
+/*--header footer--*/
+header .headerFooter{
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  margin-left: 20px;
+  padding:0 15px;
+  background-color: rgba(59, 56, 56, 0.5);
+}
+header .headerFooter span{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 18px;
+}
+header .headerFooter span.guest::before{
+  position: absolute;
+  top: 0;
+  left: -25px;
+  content: "";
+  height: 100%;
+  border-left: 2px solid rgb(245, 192, 93);
+  padding-left: 10px;
+}
+header .headerFooter span.guest::after{
+  position: relative;
+  top: 0;
+  left: 115%;
+  content: "";
+  height: 100%;
+  width: 100%;
+ background-color: rgb(245, 192, 93);
+}
+/*---Toggle-up--*/
+.wrapUp{
+  position: fixed;
+  right: 10px;
+  top: 80%;
+  background: rgb(37, 36, 36);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  text-align: center;
+  transition: animation 0.5s ease;
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0;
+  z-index: 1000;
+}
+@keyframes slideIn{
+  from{
+    opacity: 0.5;
+    transform: translateX(300px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.wrapUp .fa{
+margin:20px auto;
+font-weight: bold;
+text-decoration: none;
+color: #fff;
+}
+.wrapUp .fa:hover{
+  color: #eab058;
+}
+/*------------*/
+/*-----discount-tag---*/
+.discount{
+  position: absolute;
+margin: 20px 12px;
+  width: 40px;
+  height: 40px;
+  text-shadow: 0px 3px 5px #302b26;
+  border-radius: 50%;
+  padding: 9px;
+  text-align: center;
+  background-color: #ff711e;
+  z-index: 100;
+  font-size: 15px;
+}
+.right-d{
+  right: 10px;
+}
+/*------section---page---*/
+/* keys==>
+1. max-size is the size for each section of the content with a max-width  of 1400px
+2. th-col this is a table wrapping the content 
+a. no-wrap is a classlist that tells the content styled with the flex that it shouldn't wrap. its used on the reviews from customer plugin
+3. cols: this is a column classlist used on each child content
+4. txtContent: this is a text content in an element 
+5. imgContainer: image-container is a container that wraps the img tag
+6. links: this is an html link attribute*/
+.max-size{
+  position: relative;
+  max-width: 1500px;
+padding: 10px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin:40px auto;
+}
+.max-size .th-col{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
+.max-size .carousel{
+  display: none;
+}
+
+.max-size .carousel.active{
+  display: block;
+  opacity: 0;
+  transition: all 0.5s ease;
+  animation: fadeIn 0.5s ease forwards alternate;
+  animation-delay: 0.3s;
+}
+@keyframes fadeIn{
+  0%{
+opacity: 0.3;
+  }
+  30%{
+    opacity: 0.5;
+  }
+  60%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.max-size .no-wrap{
+  flex-wrap: nowrap;
+}
+.max-size .th-col .cols{
+  position: relative;
+  width: 500px;
+  margin:12px;
+}
+.max-size .th-col .aligned{
+  display: flex;
+  width: 300px;
+  padding: 10px;
+ 
+}
+.max-size .th-col .aligned div{
+display: inline-block;
+margin: 0;
+height: 100%;
+}
+.max-size .th-col .aligned .txtContent{
+width: 200px;
+  background-color: #eab058;
+  padding:5px 15px;
+  height: inherit;
+  color: #000;
+  font-weight: 600;
+}
+.max-size .th-col .imgContainer{
+  width: 100%;
+  height: 300px;
+  margin: 12px 0;
+  position: relative;
+
+  }
+  .max-size .th-col .imgContainer:hover img{
+    cursor: pointer;
+  }
+  .max-size .th-col .imgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.max-size .th-col  .imgContainer .footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  width: inherit;
+  /* background: rgb(236, 176, 10); */
+  z-index: 300;
+}
+.max-size .th-col  .imgContainer .footer .right-float{
+  float: right;
+  text-align: center;
+}
+.max-size .th-col  .imgContainer .footer .links{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+background-color: rgb(37, 36, 36);
+text-align: center;
+}
+.max-size .th-col  .imgContainer .footer .links .tag{
+  position: relative;
+  background: rgb(37, 36, 36);
+  width: 130px;
+  border: 3px solid rgb(236, 176, 10);
+  margin-left: 3px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.max-size .th-col  .imgContainer .footer .links .tag:hover{
+  color: #fff;
+}
+.max-size .th-col  .imgContainer .rating{
+margin:0 8px 10px 0;
+}
+.max-size .th-col  .imgContainer .top-rating{
+position: absolute;
+top: 15px;
+left: 5px;
+}
+.max-size .th-col  .imgContainer  .rating i{
+  color: #eab058;
+font-weight: 500;
+font-size: 22px;
+}
+
+.max-size .th-col  .imgContainer .footer .links .txt{
+  background: rgb(236, 176, 10);
+  width: 360px;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.max-size .th-col .second-col .imgContainer{
+  height: 600px;
+}
+
+/*-----Why-Us-----*/
+.max-size .txtContent{
+  margin: 15px 0;
+}
+.max-size .counts{
+  margin-top: 50px;
+}
+.max-size .counts .items{
+  display: inline-block;
+  margin: 12px 35px;
+  font-size: 35px;
+  color: #eab058;
+  font-weight: bold;
+  line-height: 1;
+}
+.max-size .counts .items h5{
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+/*---------facility-Style-------*/
+#facility-header-section{
+  background-image: url("../images/alcohol-architecture-bar-beer-260922.jpg");
+
+}
+#facility-page .th-col{
+  margin: 30px auto;
+}
+#facility-page .th-col .cols{
+ width: 400px;
+ margin: 12px 1px;
+}
+#facility-page .th-col .imgContainer{
+  width: 350px;
+}
+#facility-page .th-col .info h2{
+  text-align: center;
+}
+#facility-page .th-col .info{
+  background-color: #eab058;
+width: 350px;
+padding:0 15px;
+color: #302b26;
+margin-top: 0;
+position: relative;
+top: 20px;
+}
+#facility-page .th-col  .bathReview .imgContainer{
+  height: 600px;
+  width: 400px;
+  margin-bottom: 0;
+}
+@media only screen  and (max-width:1300px){
+  #facility-page .th-col  .cols{
+    width: 300px;
+  }
+  #facility-page .th-col  .cols .imgContainer{
+    width: 300px;
+    height: 280px;
+  }
+  #facility-page .th-col .info{
+    height: 450px;
+    padding-bottom: 10px;
+  }
+  #facility-page .th-col  .bathReview .imgContainer{
+    height: 450px;
+  }
+}
+@media only screen  and (max-width:900px){
+  #facility-page .th-col{
+   justify-content: center;
+  }
+  #facility-page .th-col  .bathReview .imgContainer{
+    height: 350px;
+  }
+  #facility-page .th-col  .imgContainer{
+    width: 400px;
+height: 300px
+  }
+  #facility-page .th-col .info{
+    top: 0;
+  }
+}
+@media only screen and (max-width:500px){
+
+}
+#facility-page .wrap-flex .imgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* #facilities{
+  font-size: 2em;
+  top: -50%;
+  background: none;
+}
+
+#two-sections{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section-2, #section-4{
+  display: flex;
+  flex-flow: wrap;
+  justify-items: center;
+  margin: 3em 4em;
+  margin-top: 4em;
+}
+#section-2 p, #section-3 p, #section-4 p{
+  font-size: .9em;
+}
+#section-2 h2, #section-3 h2, #section-4 h2{
+text-align: center;
+}
+#section-2 .section-2, #section-4 .fitness-div{
+  background-color: var(--orange);
+  padding: 2em;
+  width: 16em;
+}
+#section-4 .equip img{
+  height: 30em;
+}
+.services, .gym-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services img, .gym-div img{
+  width: 20em;
+  height: 15em;
+  object-fit: cover;
+}
+.bathroom, .equip img{
+  width: 20em;
+  object-fit: cover;
+}
+#section-3{
+  display: flex;
+  margin: 2em 4em;
+}
+#section-3 .menu{
+  display: flex;
+  flex-direction: column;
+}
+.menu img{
+  width: 20em;
+  height: 15em;
+  object-fit: cover;
+}
+#section-3 .buffet{
+  background-color: var(--orange);
+  padding: 2em;
+  width: 16em;
+}
+.nature{
+  width: 20em;
+}
+.crepes, .massaging, .treadmill{
+  margin-bottom: .8em;
+} */
+
+/*-----------*/
+/*---carousel-controls-----*/
+#carouselBtn{
+display: flex;
+position: relative;
+align-items: center;
+justify-content: center;
+margin:10px 0 ;
+}
+#carouselBtn #indicators{
+  position: relative;
+  margin:5px 12px 0;
+}
+#carouselBtn #indicators span{
+  display: inline-block;
+  border: 1px solid #eab058;
+  padding: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+#carouselBtn #indicators span.active{
+  background-color:#eab058 ;
+}
+#carouselBtn #nextSlide, #carouselBtn #prevSlide{
+position: relative;
+text-align: center;
+background-color: #eab058;
+color: #302b26;
+padding:3px 6px;
+cursor: pointer;
+}
+
+#carouselBtn #prevSlide i{
+  transform: rotate(180deg);
+}
+
+/*------footer-----*/
+footer{
+background-color: #eab058;
+padding: 15px;
+color: #000;
+}
+footer .footer{
+  max-width: 1350px;
+  display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  margin:0 auto;
+
+}
+footer .footer h4{
+  font-weight: 700;
+  font-size: 22px !important;
+
+}
+footer .footer div{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin:20px 15px;
+  font-size: 20px !important;
+}
+/*-------footer-form----*/
+footer .footer div.footer-one .col-two form{
+margin: 0;
+padding: 0;
+}
+footer .footer div.footer-one .col-two form .emailContainer{
+width: 30vw;
+height: 35px;
+display: flex;
+margin-top: 10px;
+}
+footer .footer div.footer-one .col-two form .emailContainer input{
+  width: 100%;
+  height: 100%;
+  padding:3px 15px 0;
+  font-size: 17px;
+  outline: 0;
+  border: none;
+}
+footer .footer div.footer-one .col-two form .emailContainer button{
+width: 70%;
+background-color: rgb(37, 36, 36);
+color: #eeeaea;
+margin-left: 5px;
+outline: none;
+border: none;
+cursor: pointer;
+}
+footer .footer div .col-two{
+  float: right;
+}
+footer .footer p{
+  font-size: 20px !important;
+}
+footer .footer div span{
+  display: inline-block;
+  margin: 12px 15px;
+
+}
+footer .footer div.footer-two span a{
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  line-height: 2;
+  color: inherit;
+  font-size: 17px !important;
+}
+footer .footer div.footer-two span a:hover{
+  text-decoration: underline;
+  color: #302b26;
+}
+
+/*-----Media query-----*/
+@media screen and (max-width: 1200px){
+  .max-size .th-col .cols{
+    width: 350px;
+  }
+ 
+}
+@media screen and (max-width: 900px){
+  nav{
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  nav ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    width: 0;
+    height: 100%;
+    transform: translateX(-500px);
+    background-color:  rgb(59, 56, 56);
+    transition: all 0.5s ease;
+    z-index: 1100;
+  }
+  nav ul.active{
+    animation: slide 0.5s ease forwards alternate;
+  }
+  @keyframes slide {
+    from{
+      opacity: 0;
+      width: 0;
+      transform: translateX(-500px);
+    }
+    to{
+      opacity: 1;
+      width: 85%;
+      transform: translateX(0);
+    }
+  }
+  nav ul li{
+    display: block;
+  }
+  nav .headerBars{
+    position: relative;
+    top:25px;
+    float: right;
+    display: block;
+  }
+  nav .headerBars.active span {
+  position: fixed;
+  right: 0;
+  background-color: red;
+  z-index: 100;
+  -webkit-transform: rotate(50deg) translateX(10px);
+          transform: rotate(50deg) translateX(10px);
+  width: 20px;
+  z-index: 1000;
+}
+
+nav .headerBars.active span:before {
+  display: none;
+}
+
+nav .headerBars.active span:after {
+  position: fixed;
+  right: 0;
+  width: 20px;
+  -webkit-transform: rotate(80deg) translateX(-15px) translateY(-2px);
+          transform: rotate(80deg) translateX(-15px) translateY(-2px);
+  background-color: red;
+  z-index: 1000;
+}
+
+nav .headerBars span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 25px;
+}
+
+nav .headerBars span:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+  border-radius: 25px;
+  z-index: 1000;
+}
+nav .headerBars span:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  margin: 15px 0;
+  border-radius: 25px;
+}
+header .txtContent{
+  font-size: 25px;
+  transition: all 0.3s ease;
+  margin: auto;
+}
+.social-icon{
+  display: none;
+  transition: all 0.5s ease;
+}
+footer .footer div.footer-one .col-two form .emailContainer{
+  width: 100%;
+}
+.max-size .th-col .aligned{
+  width: 60vw;
+}
+.max-size .th-col .cols{
+  width: 400px;
+}
+.max-size .th-col  .imgContainer .footer .links .txt{
+  width: 100%;
+}
+.max-size .th-col .second-col .imgContainer{
+  height: 350px;
+}
+}
+@media only screen and (max-width:650px){
+  .headerFooter{
+    display: none;
+  }
+ header .txtContent{
+  margin: 3rem auto;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:500px){
+.max-size .th-col{
+max-width: 100%;
+}
+.txtContent{
+  margin: auto;
+}
+.max-size .th-col .cols{
+  width: 100%;
+}
+.max-size .th-col .aligned{
+  flex-direction: column;
+  align-items: center;
+}
+.max-size .th-col .aligned .txtContent{
+  width: initial;
+
+}
+}
+/*-----End-------*/
+
+/* ---Facility-style----*/
+@media only screen and (max-width:920px) and (min-width:700px){
+  #section-2, #section-4{
+      flex-direction: column;
+  }
+  #section-2 .section-2, #section-4 .fitness-div{
+      padding: 2em;
+      width: 26em;
+  }
+  .services img, .gym-div img{
+      width: 30em;
+      height: 18em;
+  }
+  .bathroom, .equip img{
+      width: 30em;
+      height: 32em;
+  }
+  #section-3{
+      flex-direction: column;
+  }
+  .menu img{
+      width: 30em;
+      height: 18em;
+  }
+  #section-3 .buffet{
+      width: 26em;
+  }
+  .nature{
+      width: 30em;
+      height:32em;
+  }
+  .facilities{
+      margin: 3em;
+      font-size: 3em;
+  }
+  #social-links img{
+      padding: 1em;
+      width: 1.5em;
+  }
+  
+}
+
+@media only screen and (max-width:700px){
+  .facilities{
+      margin: 1em;
+      margin-top: 3em;
+      font-size: 3em;
+  }   
+  #section-1 .nav-bar{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .nav-bar ul{
+      margin-top: -.8em;
+      margin-left: -1.9em;
+  }
+  .nav-bar ul li{
+      margin: .5em;
+     }
+     .nav-bar ul li a{
+         font-size: .6em;
+     }
+     
+     #section-2, #section-4{
+      flex-direction: column;
+  }
+  .services, .gym-div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .services img, .gym-div img{
+      width: 20em;
+      height: 15em;
+  }
+  .bathroom, .equip img{
+      width: 20em;
+  }
+  #section-3{
+      flex-direction: column;
+  }
+  #section-3 .menu{
+      display: flex;
+      flex-direction: column;
+  }
+
+}
+@media only screen and (max-width:325px){
+  .links{
+      margin-left: -2.2em;
+  }
+}

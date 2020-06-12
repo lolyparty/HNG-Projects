@@ -1,0 +1,95 @@
+
+
+/* ---Facility-style----*/
+@media only screen and (max-width:920px) and (min-width:700px){
+    #section-2, #section-4{
+        flex-direction: column;
+    }
+    #section-2 .section-2, #section-4 .fitness-div{
+        padding: 2em;
+        width: 26em;
+    }
+    .services img, .gym-div img{
+        width: 30em;
+        height: 18em;
+    }
+    .bathroom, .equip img{
+        width: 30em;
+        height: 32em;
+    }
+    #section-3{
+        flex-direction: column;
+    }
+    .menu img{
+        width: 30em;
+        height: 18em;
+    }
+    #section-3 .buffet{
+        width: 26em;
+    }
+    .nature{
+        width: 30em;
+        height:32em;
+    }
+    .facilities{
+        margin: 3em;
+        font-size: 3em;
+    }
+    #social-links img{
+        padding: 1em;
+        width: 1.5em;
+    }
+    
+}
+
+@media only screen and (max-width:700px){
+    .facilities{
+        margin: 1em;
+        margin-top: 3em;
+        font-size: 3em;
+    }   
+    #section-1 .nav-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-bar ul{
+        margin-top: -.8em;
+        margin-left: -1.9em;
+    }
+    .nav-bar ul li{
+        margin: .5em;
+       }
+       .nav-bar ul li a{
+           font-size: .6em;
+       }
+       
+       #section-2, #section-4{
+        flex-direction: column;
+    }
+    .services, .gym-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .services img, .gym-div img{
+        width: 20em;
+        height: 15em;
+    }
+    .bathroom, .equip img{
+        width: 20em;
+    }
+    #section-3{
+        flex-direction: column;
+    }
+    #section-3 .menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media only screen and (max-width:325px){
+    .links{
+        margin-left: -2.2em;
+    }
+}
